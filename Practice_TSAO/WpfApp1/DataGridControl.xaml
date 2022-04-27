@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="WpfApp1.DataGridControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApp1"
+             mc:Ignorable="d" 
+             Loaded="UserControl_Loaded"
+             d:DesignHeight="60" d:DesignWidth="200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="性別:" ></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="年齡:" ></TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="電話:"></TextBlock>
+        <TextBlock x:Name="Gendertext" Grid.Row="0" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Agetext" Grid.Row="1" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Teltext" Grid.Row="2" Grid.Column="1"></TextBlock>
+        
+    </Grid>
+</UserControl>
