@@ -23,13 +23,13 @@ namespace WpfApp1
     public partial class DataGridControl : UserControl,INotifyPropertyChanged
     {
 
-        public static Person person { get; set; }
+        //public static Person person { get; set; }
 
-        public string _gender;
+        //public string _gender;
 
-        public int _age;
+        //public int _age;
 
-        public int _tel;
+        //public int _tel;
 
 
 

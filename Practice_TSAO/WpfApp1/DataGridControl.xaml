@@ -26,9 +26,9 @@
         <TextBlock Grid.Row="0" Grid.Column="0" Text="性別:" ></TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="年齡:" ></TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="0" Text="電話:"></TextBlock>
-        <TextBlock x:Name="Gendertext" Text="{Binding Path=SelectedPerson.gender}" Grid.Row="0" Grid.Column="1"></TextBlock>
-        <TextBlock x:Name="Agetext" Text="{Binding Path=SelectedPerson.age}" Grid.Row="1" Grid.Column="1"></TextBlock>
-        <TextBlock x:Name="Teltext" Text="{Binding Path=SelectedPerson.tel}" Grid.Row="2" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Gendertext" Text="{Binding Path=SelectedPerson.Gender, UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Agetext" Text="{Binding Path=SelectedPerson.Age, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Teltext" Text="{Binding Path=SelectedPerson.Tel, UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1"></TextBlock>
         
     </Grid>
 </UserControl>

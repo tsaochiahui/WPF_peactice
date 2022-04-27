@@ -6,21 +6,42 @@ using System.Threading.Tasks;
 using WpfApp1;
 using System.Collections.ObjectModel;
 
+
 namespace WpfApp1
 {
     internal class PersonViewModel
     {
+        
 
         public PersonViewModel()
         {
             Persons = new ObservableCollection<Person>
-            { new Person {Name= "Eric", gender="man",age=18,tel=123},
-            new Person { Name = "Josh", gender = "man", age = 19, tel = 456 },
-            new Person { Name = "Ady", gender = "man", age = 20, tel = 789 }
+            { new Person {Name= "Eric", Gender="man",Age=18,Tel=123},
+            new Person { Name = "Josh", Gender = "man", Age = 19, Tel = 456 },
+            new Person { Name = "Ady", Gender = "man", Age = 20, Tel = 789 }
             };
 
         }
         public ObservableCollection<Person> Persons { get; set; }
+
+
+        //public ObservableCollection<Person> Persons
+        //{
+        //    get
+        //    {
+        //        return _people;
+        //    }
+        //    set
+        //    {
+        //        if (_people != value)
+        //        {
+        //            _people = value;
+                    
+        //        }
+        //    }
+        //}
+
+        
 
         public Person SelectedPerson { get; set; }
     }

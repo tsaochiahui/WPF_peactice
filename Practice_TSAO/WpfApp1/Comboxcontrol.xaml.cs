@@ -64,17 +64,17 @@ namespace WpfApp1
             //comboBoxName.Items.Add("Josh");
             //comboBoxName.Items.Add("Ady");
             List<Person> list = new List<Person>();
-            list.Add(new Person() {Name= "Eric", gender="man",age=18,tel=123 });
-            list.Add(new Person() { Name = "Josh", gender = "man", age = 19, tel = 456 });
-            list.Add(new Person() { Name = "Ady", gender = "man", age = 20, tel = 789 });
+            list.Add(new Person() {Name= "Eric", Gender="man",Age=18,Tel=123 });
+            list.Add(new Person() { Name = "Josh", Gender = "man", Age = 19, Tel = 456 });
+            list.Add(new Person() { Name = "Ady", Gender = "man", Age = 20, Tel = 789 });
             comboBoxName.ItemsSource = list;
         }
 
         private void comboBoxName_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string gender1 = ((Person)comboBoxName.SelectedItem).gender;
-            int age1 = ((Person)comboBoxName.SelectedItem).age;
-            int tel1 = ((Person)comboBoxName.SelectedItem).tel;
+            string gender1 = ((Person)comboBoxName.SelectedItem).Gender;
+            int age1 = ((Person)comboBoxName.SelectedItem).Age;
+            int tel1 = ((Person)comboBoxName.SelectedItem).Tel;
 
             gendertext.Text = gender1;
             agetext.Text = age1.ToString();
