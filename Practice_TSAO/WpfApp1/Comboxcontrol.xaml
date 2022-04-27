@@ -6,8 +6,12 @@
              xmlns:local="clr-namespace:WpfApp1"
              mc:Ignorable="d" 
              Loaded="UserControl_Loaded"
+             xmlns:vm="clr-namespace:WpfApp1"
              d:DesignHeight="600" d:DesignWidth="200">
     
+    <UserControl.DataContext>
+        <vm:PersonViewModel></vm:PersonViewModel>
+    </UserControl.DataContext>
     <!--<UserControl.DataContext>
         
     </UserControl.DataContext>-->
@@ -18,7 +22,7 @@
             <TextBlock Name="gendertext" Width="100" Height="30"></TextBlock>
             <TextBlock Name="agetext" Width="100" Height="30"></TextBlock>
             <TextBlock Name="teltext" Width="100" Height="30"></TextBlock>
-            <ComboBox Width="100" Height="30"></ComboBox>
+            <ComboBox ItemsSource="{Binding Persons}" SelectedItem="{Binding SelectedPerson}" DisplayMemberPath="Name" Width="100" Height="30"></ComboBox>
         </StackPanel>
        
         
