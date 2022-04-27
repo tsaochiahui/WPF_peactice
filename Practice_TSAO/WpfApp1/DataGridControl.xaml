@@ -6,8 +6,11 @@
              xmlns:local="clr-namespace:WpfApp1"
              mc:Ignorable="d" 
              Loaded="UserControl_Loaded"
+             xmlns:vm="clr-namespace:WpfApp1"
              d:DesignHeight="60" d:DesignWidth="200">
-    
+    <UserControl.DataContext>
+        <vm:PersonViewModel></vm:PersonViewModel>
+    </UserControl.DataContext>
 
     <Grid>
         
@@ -23,9 +26,9 @@
         <TextBlock Grid.Row="0" Grid.Column="0" Text="性別:" ></TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="年齡:" ></TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="0" Text="電話:"></TextBlock>
-        <TextBlock x:Name="Gendertext" Text="{Binding UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1"></TextBlock>
-        <TextBlock x:Name="Agetext" Text="" Grid.Row="1" Grid.Column="1"></TextBlock>
-        <TextBlock x:Name="Teltext" Text="" Grid.Row="2" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Gendertext" Text="{Binding Path=SelectedPerson.gender}" Grid.Row="0" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Agetext" Text="{Binding Path=SelectedPerson.age}" Grid.Row="1" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Teltext" Text="{Binding Path=SelectedPerson.tel}" Grid.Row="2" Grid.Column="1"></TextBlock>
         
     </Grid>
 </UserControl>

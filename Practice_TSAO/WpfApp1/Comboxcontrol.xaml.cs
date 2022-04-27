@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
+
 namespace WpfApp1
 {
     /// <summary>
@@ -35,17 +36,17 @@ namespace WpfApp1
         //public class Person
         //{  
         //    public string Name { get; set; }
-            public string gender 
-        {
-            set
-            {
-                gender = value;
-                NotifyPropertyChanged("Gender");
-            }
+        //    public string gender 
+        //{
+        //    set
+        //    {
+        //        gender = value;
+        //        NotifyPropertyChanged("Gender");
+        //    }
 
-            get { return gender; }
+        //    get { return gender; }
                         
-        }
+        //}
         //    public int age { get; set; }
         //    public int tel { get; set; }
         //}

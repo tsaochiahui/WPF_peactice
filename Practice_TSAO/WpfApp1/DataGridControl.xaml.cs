@@ -36,7 +36,7 @@ namespace WpfApp1
         public DataGridControl()
         {
             InitializeComponent();
-
+            DataContext = new PersonViewModel();
             //DataContext =new Person();
             //this.DataContext = this;
         }
