@@ -15,10 +15,8 @@
             </TabItem>
 
             <TabItem Header="ComboBox / DataGrid">
-                <!--<ComboBox Width="100" Height="30" Margin="72,0,622,300"></ComboBox>-->
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="200"></RowDefinition>
                         <RowDefinition Height="200"></RowDefinition>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>

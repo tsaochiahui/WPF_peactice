@@ -6,12 +6,21 @@
              xmlns:local="clr-namespace:WpfApp1"
              mc:Ignorable="d" 
              Loaded="UserControl_Loaded"
-             d:DesignHeight="200" d:DesignWidth="200">
-    <Grid>
-        <ComboBox Name="comboBoxName" Width="100" Height="30" Margin="0,-80,0,0" DisplayMemberPath="Name" SelectionChanged="comboBoxName_SelectionChanged"></ComboBox>
-        <TextBlock Name="gendertext" Width="100" Height="30" Margin="10,20,10,0"></TextBlock>
-        <TextBlock Name="agetext" Width="100" Height="30" Margin="10,80,10,0"></TextBlock>
-        <TextBlock Name="teltext" Width="100" Height="30" Margin="10,130,10,0"></TextBlock>
+             d:DesignHeight="600" d:DesignWidth="200">
+    
+    <!--<UserControl.DataContext>
+        
+    </UserControl.DataContext>-->
+
+<Grid>
+        <StackPanel>
+            <ComboBox Name="comboBoxName" Width="100" Height="30" DisplayMemberPath="Name" SelectionChanged="comboBoxName_SelectionChanged"></ComboBox>
+            <TextBlock Name="gendertext" Width="100" Height="30"></TextBlock>
+            <TextBlock Name="agetext" Width="100" Height="30"></TextBlock>
+            <TextBlock Name="teltext" Width="100" Height="30"></TextBlock>
+            <ComboBox Width="100" Height="30"></ComboBox>
+        </StackPanel>
+       
         
     </Grid>
 </UserControl>

@@ -12,25 +12,49 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace WpfApp1
 {
     /// <summary>
     /// Comboxcontrol.xaml 的互動邏輯
     /// </summary>
-    public partial class Comboxcontrol : UserControl
+    public partial class Comboxcontrol : UserControl,INotifyPropertyChanged
     {
         public Comboxcontrol()
         {
             InitializeComponent();
+            DataContext = new PersonViewModel();
         }
 
-        public class Person
-        {   public string Name { get; set; }
-            public string gender { get; set; }
-            public int age { get; set; }
-            public int tel { get; set; }
+        public static Person person { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        //public class Person
+        //{  
+        //    public string Name { get; set; }
+            public string gender 
+        {
+            set
+            {
+                gender = value;
+                NotifyPropertyChanged("Gender");
+            }
+
+            get { return gender; }
+                        
         }
+        //    public int age { get; set; }
+        //    public int tel { get; set; }
+        //}
+        protected void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            { PropertyChanged(this, new PropertyChangedEventArgs(propertyName)); }
+        }
+
 
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -50,10 +74,17 @@ namespace WpfApp1
             string gender1 = ((Person)comboBoxName.SelectedItem).gender;
             int age1 = ((Person)comboBoxName.SelectedItem).age;
             int tel1 = ((Person)comboBoxName.SelectedItem).tel;
-            
+
             gendertext.Text = gender1;
             agetext.Text = age1.ToString();
             teltext.Text = tel1.ToString();
+
+
+
+            //person.gender = gender1;
+            //person.age = age1;
+            //person.tel = tel1;
+
 
         }
     }

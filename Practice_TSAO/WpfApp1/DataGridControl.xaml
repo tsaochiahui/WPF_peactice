@@ -7,7 +7,10 @@
              mc:Ignorable="d" 
              Loaded="UserControl_Loaded"
              d:DesignHeight="60" d:DesignWidth="200">
+    
+
     <Grid>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"></ColumnDefinition>
             <ColumnDefinition Width="100"></ColumnDefinition>
@@ -20,9 +23,9 @@
         <TextBlock Grid.Row="0" Grid.Column="0" Text="性別:" ></TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="年齡:" ></TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="0" Text="電話:"></TextBlock>
-        <TextBlock x:Name="Gendertext" Grid.Row="0" Grid.Column="1"></TextBlock>
-        <TextBlock x:Name="Agetext" Grid.Row="1" Grid.Column="1"></TextBlock>
-        <TextBlock x:Name="Teltext" Grid.Row="2" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Gendertext" Text="{Binding UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Agetext" Text="" Grid.Row="1" Grid.Column="1"></TextBlock>
+        <TextBlock x:Name="Teltext" Text="" Grid.Row="2" Grid.Column="1"></TextBlock>
         
     </Grid>
 </UserControl>
