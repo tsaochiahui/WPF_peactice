@@ -8,9 +8,10 @@ namespace WpfApp1
 {
     public class Person
     {
-        public string gender;
-        public int age;
-        public int tel;
+        public string Name { get; set; }
+        public string gender { get; set; }
+        public int age { get; set; }
+        public int tel { get; set; }
 
     }
 
