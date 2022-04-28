@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using WpfApp1;
 using System.Collections.ObjectModel;
-
+using WpfApp1.ViewModels;
 
 namespace WpfApp1
 {
-    internal class PersonViewModel
+    public class PersonViewModel: ViewModelBase
     {
         
 
